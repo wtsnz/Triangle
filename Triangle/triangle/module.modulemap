@@ -1,0 +1,4 @@
+module LibTriangle [system][extern_c] {
+    header "triangle.h"
+    export *
+}

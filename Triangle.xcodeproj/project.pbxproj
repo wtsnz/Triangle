@@ -10,6 +10,9 @@
 		BE68CE8921814E4800D8F3F8 /* Triangle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE68CE7F21814E4700D8F3F8 /* Triangle.framework */; };
 		BE68CE8E21814E4800D8F3F8 /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE8D21814E4800D8F3F8 /* TriangleTests.swift */; };
 		BE68CE9021814E4800D8F3F8 /* Triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = BE68CE8221814E4700D8F3F8 /* Triangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE68CE9C21814E6E00D8F3F8 /* triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = BE68CE9A21814E6E00D8F3F8 /* triangle.h */; };
+		BE68CE9D21814E6E00D8F3F8 /* triangle.c in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE9B21814E6E00D8F3F8 /* triangle.c */; };
+		BE68CEA02181506200D8F3F8 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE9F2181506200D8F3F8 /* Triangle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,10 @@
 		BE68CE8821814E4800D8F3F8 /* TriangleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriangleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE68CE8D21814E4800D8F3F8 /* TriangleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
 		BE68CE8F21814E4800D8F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE68CE9A21814E6E00D8F3F8 /* triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = triangle.h; sourceTree = "<group>"; };
+		BE68CE9B21814E6E00D8F3F8 /* triangle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = triangle.c; sourceTree = "<group>"; };
+		BE68CE9E21814E8600D8F3F8 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		BE68CE9F2181506200D8F3F8 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +78,10 @@
 		BE68CE8121814E4700D8F3F8 /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
+				BE68CE9921814E6300D8F3F8 /* triangle */,
 				BE68CE8221814E4700D8F3F8 /* Triangle.h */,
 				BE68CE8321814E4700D8F3F8 /* Info.plist */,
+				BE68CE9F2181506200D8F3F8 /* Triangle.swift */,
 			);
 			path = Triangle;
 			sourceTree = "<group>";
@@ -86,6 +95,16 @@
 			path = TriangleTests;
 			sourceTree = "<group>";
 		};
+		BE68CE9921814E6300D8F3F8 /* triangle */ = {
+			isa = PBXGroup;
+			children = (
+				BE68CE9B21814E6E00D8F3F8 /* triangle.c */,
+				BE68CE9A21814E6E00D8F3F8 /* triangle.h */,
+				BE68CE9E21814E8600D8F3F8 /* module.modulemap */,
+			);
+			path = triangle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,6 +112,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE68CE9C21814E6E00D8F3F8 /* triangle.h in Headers */,
 				BE68CE9021814E4800D8F3F8 /* Triangle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					BE68CE7E21814E4700D8F3F8 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					BE68CE8721814E4800D8F3F8 = {
 						CreatedOnToolsVersion = 10.0;
@@ -194,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE68CE9D21814E6E00D8F3F8 /* triangle.c in Sources */,
+				BE68CEA02181506200D8F3F8 /* Triangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +297,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Triangle/triangle/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -331,6 +355,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Triangle/triangle/**";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -341,6 +366,7 @@
 		BE68CE9421814E4800D8F3F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -354,9 +380,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-lm";
 				PRODUCT_BUNDLE_IDENTIFIER = io.townsend.Triangle;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +393,7 @@
 		BE68CE9521814E4800D8F3F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -378,6 +407,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-lm";
 				PRODUCT_BUNDLE_IDENTIFIER = io.townsend.Triangle;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -389,6 +419,7 @@
 		BE68CE9721814E4800D8F3F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TriangleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +437,7 @@
 		BE68CE9821814E4800D8F3F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TriangleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
