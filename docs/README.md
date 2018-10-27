@@ -144,4 +144,8 @@ let (points, triangleIndicies) = Triangulate.ConformingDelaunay(points: points, 
 
 | Constrained Delaunay | Conforming Delaunay |
 | :---: | :---: |
-| ![](ConformingDelaunay-A-triangles.png) | ![](images/conforming_del.png) |
+| ![](ConstrainedDelaunay-triangles.png) | ![](ConformingDelaunay-triangles.png) |
+
+| Constrained Delaunay | Conforming Delaunay |
+| :---: | :---: |
+| ![](ConstrainedDelaunay-A-triangles.png) | ![](ConformingDelaunay-A-triangles.png) |
