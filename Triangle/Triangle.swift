@@ -165,7 +165,7 @@ private func DebugTriangulation(points: [Double], trianglesIndices: [Int], scale
     let img = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
 
-    if let data = img?.pngData() {
+    if let img = img, let data = UIImagePNGRepresentation(img) {
         let url = URL(fileURLWithPath: NSTemporaryDirectory() + "sds" + "-triangles.png")
         print(url)
         dump(url)
