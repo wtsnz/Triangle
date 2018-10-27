@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1335CA2185113E00A2BF48 /* TriangulateIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1335C92185113E00A2BF48 /* TriangulateIO.swift */; };
+		BE1335CC2185116C00A2BF48 /* Triangulate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1335CB2185116C00A2BF48 /* Triangulate.swift */; };
+		BE1335CE2185119700A2BF48 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1335CD2185119700A2BF48 /* Other.swift */; };
+		BE1335CF21851B7600A2BF48 /* triangle.c in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE9B21814E6E00D8F3F8 /* triangle.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		BE68CE8921814E4800D8F3F8 /* Triangle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE68CE7F21814E4700D8F3F8 /* Triangle.framework */; };
 		BE68CE8E21814E4800D8F3F8 /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE8D21814E4800D8F3F8 /* TriangleTests.swift */; };
 		BE68CE9021814E4800D8F3F8 /* Triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = BE68CE8221814E4700D8F3F8 /* Triangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE68CE9C21814E6E00D8F3F8 /* triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = BE68CE9A21814E6E00D8F3F8 /* triangle.h */; };
-		BE68CE9D21814E6E00D8F3F8 /* triangle.c in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE9B21814E6E00D8F3F8 /* triangle.c */; };
 		BE68CEA02181506200D8F3F8 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE9F2181506200D8F3F8 /* Triangle.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE1335C92185113E00A2BF48 /* TriangulateIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangulateIO.swift; sourceTree = "<group>"; };
+		BE1335CB2185116C00A2BF48 /* Triangulate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangulate.swift; sourceTree = "<group>"; };
+		BE1335CD2185119700A2BF48 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		BE68CE7F21814E4700D8F3F8 /* Triangle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Triangle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE68CE8221814E4700D8F3F8 /* Triangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
 		BE68CE8321814E4700D8F3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,10 +84,13 @@
 		BE68CE8121814E4700D8F3F8 /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
+				BE68CE9F2181506200D8F3F8 /* Triangle.swift */,
+				BE1335CB2185116C00A2BF48 /* Triangulate.swift */,
+				BE1335C92185113E00A2BF48 /* TriangulateIO.swift */,
+				BE1335CD2185119700A2BF48 /* Other.swift */,
 				BE68CE9921814E6300D8F3F8 /* triangle */,
 				BE68CE8221814E4700D8F3F8 /* Triangle.h */,
 				BE68CE8321814E4700D8F3F8 /* Info.plist */,
-				BE68CE9F2181506200D8F3F8 /* Triangle.swift */,
 			);
 			path = Triangle;
 			sourceTree = "<group>";
@@ -215,8 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE68CE9D21814E6E00D8F3F8 /* triangle.c in Sources */,
+				BE1335CC2185116C00A2BF48 /* Triangulate.swift in Sources */,
+				BE1335CF21851B7600A2BF48 /* triangle.c in Sources */,
 				BE68CEA02181506200D8F3F8 /* Triangle.swift in Sources */,
+				BE1335CE2185119700A2BF48 /* Other.swift in Sources */,
+				BE1335CA2185113E00A2BF48 /* TriangulateIO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +309,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Triangle/triangle/**";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -355,7 +367,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Triangle/triangle/**";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -383,6 +395,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.townsend.Triangle;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Triangle/triangle";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,6 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.townsend.Triangle;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Triangle/triangle";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
