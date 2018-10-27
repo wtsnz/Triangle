@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = "Triangle"
   s.version          = "1.0.0"
   s.summary          = "Swift wrapper for Triangle.c."
-  s.swift_version    = "4.1"
+  s.swift_version    = "4.2"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   #s.osx.deployment_target = '10.9'
   s.requires_arc = true
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 
   s.source_files = 'Triangle/*.{swift,h}', 'Triangle/triangle/*.{c,h}'
   s.public_header_files = 'Triangle/triangle/*.h'

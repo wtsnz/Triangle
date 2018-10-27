@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import LibTriangle
+import CTriangle
 
 class TriangulateIO {
     let context: UnsafeMutablePointer<triangulateio>

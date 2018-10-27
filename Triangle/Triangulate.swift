@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import LibTriangle
+import CTriangle
 
 public class Triangulate {
 
