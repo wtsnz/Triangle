@@ -14,7 +14,7 @@
 		BE68CE8921814E4800D8F3F8 /* Triangle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE68CE7F21814E4700D8F3F8 /* Triangle.framework */; };
 		BE68CE8E21814E4800D8F3F8 /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE8D21814E4800D8F3F8 /* TriangleTests.swift */; };
 		BE68CE9021814E4800D8F3F8 /* Triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = BE68CE8221814E4700D8F3F8 /* Triangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE68CE9C21814E6E00D8F3F8 /* triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = BE68CE9A21814E6E00D8F3F8 /* triangle.h */; };
+		BE68CE9C21814E6E00D8F3F8 /* triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = BE68CE9A21814E6E00D8F3F8 /* triangle.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		BE68CEA02181506200D8F3F8 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CE9F2181506200D8F3F8 /* Triangle.swift */; };
 /* End PBXBuildFile section */
 

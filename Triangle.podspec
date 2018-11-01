@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Triangle"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Swift wrapper for Triangle.c."
   s.swift_version    = "4.2"
 
@@ -36,12 +36,12 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 
   s.source_files = 'Triangle/*.{swift,h}', 'Triangle/triangle/*.{c,h}'
-  s.public_header_files = 'Triangle/triangle/*.h'
+  s.private_header_files = 'Triangle/triangle/*.h'
   s.pod_target_xcconfig = {
       'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/Triangle/triangle/**',
-      'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Triangle/'
+      #'LIBRARY_SEARCH_PATHS' => '$(SRCROOT)/Triangle/'
   }
 
- s.preserve_paths  = 'Triangle/triangle/module.modulemap'
+  s.preserve_paths  = 'Triangle/triangle/module.modulemap'
 
 end
